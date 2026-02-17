@@ -203,5 +203,5 @@ data/processed/rfm_with_clusters.csv
 # 📌 Author
 
 Rigal Patel
-MSc AI | Machine Learning Portfolio Project
+
 
