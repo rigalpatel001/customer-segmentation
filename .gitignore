@@ -1,0 +1,53 @@
+# =========================
+# Python
+# =========================
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual Environment
+venv/
+.env/
+.env.*
+
+# =========================
+# Data Files
+# =========================
+data/raw/*
+data/processed/*
+!data/raw/.gitkeep
+!data/processed/.gitkeep
+
+# Jupyter Notebook
+.ipynb_checkpoints/
+
+# =========================
+# Model / Output Files
+# =========================
+*.pkl
+*.joblib
+*.model
+*.h5
+
+# =========================
+# Logs
+# =========================
+*.log
+
+# =========================
+# IDE / OS
+# =========================
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# =========================
+# Matplotlib cache
+# =========================
+.matplotlib/
+
+# =========================
+# Testing
+# =========================
+.pytest_cache/

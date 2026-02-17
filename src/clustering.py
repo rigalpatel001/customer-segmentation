@@ -1,17 +1,16 @@
+from sklearn.cluster import KMeans, AgglomerativeClustering
+from sklearn.metrics import silhouette_score
 
-from sklearn.cluster import KMeans, DBSCAN, AgglomerativeClustering
 
-def run_kmeans(X, n_clusters=3):
-    model = KMeans(n_clusters=n_clusters, random_state=42)
-    labels = model.fit_predict(X)
-    return model, labels
+def run_kmeans(data, k=3):
+    model = KMeans(n_clusters=k, random_state=42)
+    labels = model.fit_predict(data)
+    score = silhouette_score(data, labels)
+    return labels, score
 
-def run_hierarchical(X, n_clusters=3):
-    model = AgglomerativeClustering(n_clusters=n_clusters)
-    labels = model.fit_predict(X)
-    return model, labels
 
-def run_dbscan(X, eps=0.5, min_samples=5):
-    model = DBSCAN(eps=eps, min_samples=min_samples)
-    labels = model.fit_predict(X)
-    return model, labels
+def run_hierarchical(data, k=3):
+    model = AgglomerativeClustering(n_clusters=k)
+    labels = model.fit_predict(data)
+    score = silhouette_score(data, labels)
+    return labels, score
